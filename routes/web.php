@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,4 +18,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get("products/search", [ProductController::class, "search"])->name("products.search");
+
+Route::resource("products", ProductController::class)
+  ->only(["store", "create", "show", "index"]);
 require __DIR__.'/auth.php';

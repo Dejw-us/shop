@@ -9,8 +9,10 @@
     <body class="flex flex-col items-center">
       <nav class="flex justify-between">
         <h1 class="text-4xl m-3 p-1">Szybki Sklep</h1>
-        <input class="m-3" type="text" placeholder="szukaj produktów">
-        <button class="text-3xl m-3 bg-green-500 p-2 rounded">Szukaj</button>
+        <form action="{{ route("products.search") }}" method="get">
+          <input class="m-3" type="text" placeholder="szukaj produktów" name="search">
+          <button class="text-3xl m-3 bg-green-500 p-2 rounded" type="submit">Szukaj</button>
+        </form>
       </nav>
     </body> 
 </html>

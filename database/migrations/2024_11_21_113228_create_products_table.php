@@ -14,7 +14,7 @@ return new class extends Migration
       $table->string("name");
       $table->decimal("price", total: 12, places: 2);
       $table->integer("stock")->default(0);
-      $table->decimal("discount", total: 12, places: 2);
+      $table->decimal("discount", total: 12, places: 2)->default(0);
       $table->text("keywords");
     });
   }
