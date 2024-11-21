@@ -12,9 +12,9 @@ return new class extends Migration
       $table->id();
       $table->timestamps();
       $table->string("name");
-      $table->decimal("price", total: 11, places: 2);
+      $table->decimal("price", total: 12, places: 2);
       $table->integer("stock")->default(0);
-      $table->decimal("discount", total: 11, places: 2);
+      $table->decimal("discount", total: 12, places: 2);
     });
   }
 
